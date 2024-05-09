@@ -1,0 +1,22 @@
+{
+  "type": "commonjs",
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chart.js": "^2.9.41",
+    "@types/node": "^20.12.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "chartjs-node-canvas": "^4.1.6",
+    "fs": "^0.0.1-security"
+  }
+}
