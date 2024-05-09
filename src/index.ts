@@ -150,9 +150,9 @@ class TicTacToe {
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
         if (this.board[i][j] === "-") {
-          this.board[i][j] = "O"; // Simulamos a jogada do jogador O (máquina)
+          this.board[i][j] = "O";
           const score = this.minimax(0, false);
-          this.board[i][j] = "-"; // Desfazemos a jogada
+          this.board[i][j] = "-";
           if (score > bestScore) {
             bestScore = score;
             bestMove = [i, j];
@@ -175,9 +175,9 @@ class TicTacToe {
       for (let i = 0; i < 3; i++) {
         for (let j = 0; j < 3; j++) {
           if (this.board[i][j] === "-") {
-            this.board[i][j] = "O"; // Simulamos a jogada do jogador O (máquina)
+            this.board[i][j] = "O";
             const score = this.minimax(depth + 1, false);
-            this.board[i][j] = "-"; // Desfazemos a jogada
+            this.board[i][j] = "-";
             bestScore = Math.max(bestScore, score);
           }
         }
@@ -188,9 +188,9 @@ class TicTacToe {
       for (let i = 0; i < 3; i++) {
         for (let j = 0; j < 3; j++) {
           if (this.board[i][j] === "-") {
-            this.board[i][j] = "X"; // Simulamos a jogada do jogador X (humano)
+            this.board[i][j] = "X";
             const score = this.minimax(depth + 1, true);
-            this.board[i][j] = "-"; // Desfazemos a jogada
+            this.board[i][j] = "-";
             bestScore = Math.min(bestScore, score);
           }
         }
@@ -556,9 +556,9 @@ const initGame = async () => {
 
   await generateGraphicImageFromResults(results);
 
-  /* const game = new TicTacToe();
+  const game = new TicTacToe();
 
-  game.playAgainstUnbeatablePlayer(); */
+  game.playAgainstUnbeatablePlayer();
 };
 
 initGame();
